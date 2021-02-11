@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Controle de Estoque</title>
+</head>
+<body onload="carregarTotalEstoque('totalEstoque')">
+    <div class="container">
+        <div class="carrinho">
+            <img class="imagem" src="img-car.png">
+            <p>Estoque:<span id="totalEstoque">0</span></p>
+        </div>
+        <div class="menu">
+            <h1>Cadastro de produtos</h1>
+            <div class="cadastro">
+                <form>
+                    <label for="nomeProduto">Nome do produto: </label>
+                    <input type="text" name="nomeProduto" id="nomeProduto">
+                    <label for="codigoProduto">Código do produto: </label>
+                    <input type="text" name="codigoProduto" id="codigoProduto">
+                    <label for="qntd">Quantidade de produtos: </label>
+                    <input type="number" name="qntd" id="qntd" min="0" max="20">
+                     <div class="botao-group">
+                        <input type="button" value="Cadastrar" class="botao" onclick="validarProduto('nomeProduto','codigoProduto','qntd')">
+                        <input type="button" value="Ver estoque" class="botao" onclick="window.open('VerEstoque.html', '_self')">
+                        <input type="reset" value="Limpar" class="botao">
+                     </div>       
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
